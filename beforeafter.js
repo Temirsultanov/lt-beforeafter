@@ -12,7 +12,6 @@
     let sliderButton = document.querySelector('.slider__button');
     let sliderCircle = sliderButton.querySelector('.slider__circle');
     let sliderRange = sliderButton.querySelector('.slider__range');
-    let helptext = document.querySelector('.helptext');
 
 
 
@@ -55,21 +54,18 @@
         sliderImage.style.width = `${100 * sliderTransition / MAX_TRANSITION}%`
     }
     let onSliderButtonMove = function (evt) {
-        helptext.textContent = 'move!';
-        let mouseX = evt.clientX;
+        let mouseX = evt.pageX;
         changeSlider(mouseX);
     }
     let onSliderButtonUp = function (evt) {
-        helptext.textContent = 'up!';
         window.removeEventListener('mousemove', onSliderButtonMove);
         window.removeEventListener('touchmove', onSliderButtonMove);
         window.removeEventListener('mouseup', onSliderButtonUp);
         window.removeEventListener('touchend', onSliderButtonUp);
     };
     let onSliderButtonDown = function (evt) {
-        helptext.textContent = evt.target === sliderCircle || evt.target === sliderRange || evt.target === sliderButton;
         if (evt.target === sliderCircle || evt.target === sliderRange || evt.target === sliderButton) {
-            let mouseX = evt.clientX;
+            let mouseX = evt.pageX;
             changeSlider(mouseX);
             window.addEventListener('mousemove', onSliderButtonMove);
             window.addEventListener('touchmove', onSliderButtonMove);
