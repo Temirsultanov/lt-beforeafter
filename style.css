@@ -159,7 +159,8 @@ a:hover{
     border-radius: 40px 0 0 40px;
     color: var(--blue);
     font-size: 22px;
-    padding-left: 50px;
+    padding-left: 30px;
+    font-family: 'Montserrat';
     padding-top: 26px;
     border: 1px solid  var(--grey);
 }
