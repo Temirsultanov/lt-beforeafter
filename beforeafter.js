@@ -67,7 +67,7 @@
         window.removeEventListener('touchend', onSliderButtonUp);
     };
     let onSliderButtonDown = function (evt) {
-        helptext.textContent = 'down!';
+        helptext.textContent = evt.target === sliderCircle || evt.target === sliderRange || evt.target === sliderButton;
         if (evt.target === sliderCircle || evt.target === sliderRange || evt.target === sliderButton) {
             let mouseX = evt.clientX;
             changeSlider(mouseX);
