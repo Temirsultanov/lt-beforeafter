@@ -11,6 +11,15 @@
     let sliderBlock = document.querySelector('.slider');
     let sliderButton = document.querySelector('.slider__button');
     let sliderCircle = sliderButton.querySelector('.slider__circle');
+    let sliderRange = sliderButton.querySelector('.slider__range');
+
+
+
+
+
+
+
+
 
 
     let sliderTransition = 250;
@@ -45,32 +54,49 @@
         sliderCircle.style.transform = translateStr;
         sliderImage.style.width = `${100 * sliderTransition / MAX_TRANSITION}%`
     }
-    let onSliderButtonDown = function (evt) {
+    let onSliderButtonMove = function (evt) {
         let mouseX = evt.clientX;
         changeSlider(mouseX);
-        let onSliderButtonMove = function (evt) {
+    }
+    let onSliderButtonUp = function (evt) {
+        window.removeEventListener('mousemove', onSliderButtonMove);
+        window.removeEventListener('touchmove', onSliderButtonMove);
+        window.removeEventListener('mouseup', onSliderButtonUp);
+        window.removeEventListener('touchend', onSliderButtonUp);
+    };
+    let onSliderButtonDown = function (evt) {
+        if (evt.target === sliderCircle || evt.target === sliderRange || evt.target === sliderButton) {
             let mouseX = evt.clientX;
             changeSlider(mouseX);
+            window.addEventListener('mousemove', onSliderButtonMove);
+            window.addEventListener('touchmove', onSliderButtonMove);
+            window.addEventListener('mouseup', onSliderButtonUp);
+            window.addEventListener('touchend', onSliderButtonUp);
         }
-        window.addEventListener('mousemove', onSliderButtonMove);
-        window.addEventListener('touchmove', onSliderButtonMove);
-
-
-
-        let onSliderButtonUp = function (evt) {
-            window.removeEventListener('mousemove', onSliderButtonMove);
-            window.removeEventListener('touchmove', onSliderButtonMove);
-            window.removeEventListener('mouseup', onSliderButtonUp);
-            window.removeEventListener('touchend', onSliderButtonUp);
-        };
-        window.addEventListener('mouseup', onSliderButtonUp);
-        window.addEventListener('touchend', onSliderButtonUp);
     }
-    sliderButton.addEventListener('mousedown', onSliderButtonDown);
-    sliderButton.addEventListener('touchstart', onSliderButtonDown);
+    window.addEventListener('mousedown', onSliderButtonDown);
+    window.addEventListener('touchstart', onSliderButtonDown);
 
 
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // Photo
     let TYPE_FILES = ['gif', 'png', 'jpeg', 'jpg', 'svg', 'HEIC'];
     let changePhoto = function(input, photo1, photo2, photo3) {
         let file = input.files[0];
