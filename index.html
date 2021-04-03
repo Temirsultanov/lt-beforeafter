@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lt-burger.css">
+    <title>JLT Before-After Plugin </title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-top">
+                <a href="index.html" class="logo">
+                    <svg width="99" height="86" viewBox="0 0 99 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="l" d="M60 41.9845H35L40 31H99L92 42H75L52 86H37L60 41.9845Z" fill="black"/>
+                        <path id="t" d="M32 0H46L21 51H46L40 62H0L32 0Z" fill="black"/>
+
+                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="21" y="0" width="25" height="51">
+                            <path d="M40 31L46 0L21 51H31L40 31Z" fill="#FFDF37"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <rect id="recttop" x="-14" y="-24" width="100" height="100" fill="#FFDF37"/>
+                        </g>
+                        <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="21" y="42" width="39" height="9">
+                            <path d="M55.2788 51H21L25.5 42H60L55.2788 51Z" fill="#FFDF37"/>
+                        </mask>
+                        <g mask="url(#mask1)">
+                            <rect id="rectmiddle" x="-8" y="-7" width="100" height="100" fill="#FFDF37"/>
+                        </g>
+                        <mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="37" y="42" width="23" height="44">
+                            <path d="M37 86L60 42H51L40 62L37 86Z" fill="#FFDF37"/>
+                        </mask>
+                        <g mask="url(#mask2)">
+                            <rect id="rectbottom" x="-2" y="9" width="100" height="100" fill="#FFDF37"/>
+                        </g>
+                    </svg>                   
+                </a>
+                <ul class="ltmenu">
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Портфолио</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+                <button class="ltburger">
+                    <span class="burger-top"></span>
+                    <span class="burger-bottom"></span>
+                </button>
+                <ul class="ltmenu__mobile">
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Портфолио</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+                <div class="ltdark ltdark-burger"></div>
+            </div>
+        </div>
+    </header>
+    <main class="before-after">
+        <div class="container">
+            <section class="inputs">
+                <div class="before-input__box">
+                    <div class="lt-h2">До</div>
+                    <label for="before" class="label">Загрузить фото</label>
+                    <input type="file" id="before">
+                    <img src="before.png" alt="Фото 'До'" class="mini__photo">
+                </div>
+                <div class="after-input__box">
+                    <div class="lt-h2">После</div>
+                    <label for="after" class="label">Загрузить фото</label>
+                    <input type="file" id="after">
+                    <img src="after.png" alt="Фото 'После'" class="mini__photo">
+                </div>
+            </section>
+            <section class="switch">
+                <h2 class="lt-h2">Свитч</h2> 
+                <div class="switch-box">
+                    <img src="after.png" alt="Фото 'После'" class="switch__after">
+                    <img src="before.png" alt="Фото 'До'" class="switch__before">
+                </div>
+                <button class="switch__button">
+                    <div class="switch__circle"></div>
+                </button>
+            </section>
+            <section class="slider">
+                <h2 class="lt-h2">Слайдер</h2>
+                <div class="slider-box">
+                    <img src="after.png" alt="Фото 'После'" class="slider__after">
+                    <div class="before-box">
+                        <img src="before.png" alt="Фото 'До'" class="slider__before">    
+                    </div>
+                </div>
+                <div class="slider__button">
+                    <div class="slider__range"></div>
+                    <div class="slider__circle"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <a class="tg-link" href="https://t.me/temirsultanov">
+                <svg width="50" height="42" viewBox="0 0 50 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M38.3 41.2056C38.9708 41.6806 39.8353 41.7994 40.6062 41.5077C41.377 41.214 41.9436 40.5556 42.1145 39.7577C43.9248 31.2496 48.3164 9.71467 49.9643 1.97526C50.0893 1.39194 49.8809 0.785708 49.4226 0.396133C48.9643 0.00655878 48.3289 -0.105939 47.7622 0.104473C39.027 3.33773 12.1256 13.4313 1.12997 17.4999C0.432069 17.7582 -0.0220873 18.4291 0.000828843 19.1645C0.0258283 19.9019 0.52165 20.5415 1.23622 20.7561C6.16736 22.2311 12.6401 24.2831 12.6401 24.2831C12.6401 24.2831 15.6651 33.4183 17.2421 38.064C17.44 38.6473 17.8963 39.1057 18.4983 39.264C19.0983 39.4202 19.74 39.2557 20.1879 38.8328C22.7211 36.4411 26.6377 32.7433 26.6377 32.7433C26.6377 32.7433 34.0792 38.1994 38.3 41.2056V41.2056ZM15.363 23.129L18.8608 34.6662L19.6379 27.3601C19.6379 27.3601 33.1522 15.1708 40.8562 8.22304C41.0811 8.01888 41.1124 7.67722 40.9249 7.43764C40.7395 7.19806 40.3978 7.14181 40.1416 7.30431C31.2126 13.0063 15.363 23.129 15.363 23.129Z" fill="#0087D2"/>
+                </svg>    
+            </a>
+        </div>
+    </footer>
+    <script src="lt-burger.js"></script>
+    <script src="beforeafter.js"></script>
+</body>
