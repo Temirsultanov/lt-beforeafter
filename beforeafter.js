@@ -67,7 +67,7 @@
         window.addEventListener('touchend', onSliderButtonUp);
     }
     sliderButton.addEventListener('mousedown', onSliderButtonDown);
-    sliderButton.addEventListener('touchdown', onSliderButtonDown);
+    sliderButton.addEventListener('touchstart', onSliderButtonDown);
 
 
 
