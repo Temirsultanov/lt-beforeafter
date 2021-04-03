@@ -53,16 +53,21 @@
             changeSlider(mouseX);
         }
         window.addEventListener('mousemove', onSliderButtonMove);
+        window.addEventListener('touchmove', onSliderButtonMove);
 
 
 
         let onSliderButtonUp = function (evt) {
             window.removeEventListener('mousemove', onSliderButtonMove);
+            window.removeEventListener('touchmove', onSliderButtonMove);
             window.removeEventListener('mouseup', onSliderButtonUp);
+            window.removeEventListener('touchend', onSliderButtonUp);
         };
         window.addEventListener('mouseup', onSliderButtonUp);
+        window.addEventListener('touchend', onSliderButtonUp);
     }
     sliderButton.addEventListener('mousedown', onSliderButtonDown);
+    sliderButton.addEventListener('touchdown', onSliderButtonDown);
 
 
 
