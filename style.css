@@ -156,11 +156,12 @@ a:hover{
     cursor: pointer;
     box-sizing: border-box;
     height: 80px;
-    border-radius: 40px 0 0 40px;
+    border-radius: 0px 0 0 0px;
     color: var(--blue);
     font-size: 22px;
     padding-left: 30px;
     font-family: 'Montserrat';
+    font-weight: 400;
     padding-top: 26px;
     border: 1px solid  var(--grey);
 }
