@@ -153,5 +153,4 @@
         changePhoto(before, beforeMiniPhoto, switchBeforePhoto, sliderBeforePhoto);
     }
     before.addEventListener('change', onBeforeChange);
-    document.querySelector('.helptext').textContent = document.querySelector('label').style.font;
 })();
