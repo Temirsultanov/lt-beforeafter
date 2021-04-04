@@ -1,7 +1,7 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat';
+    font-family: 'Lato';
     font-size: 18px;
     line-height: 150%;
     --black: #000000;
@@ -125,7 +125,7 @@ a:hover{
     display: flex;
 }
 .lt-h2{
-    font-family: 'Montserrat';
+    font-family: 'Lato';
     font-size: 30px;
     font-weight: 400;
 }
@@ -160,7 +160,7 @@ a:hover{
     color: var(--blue);
     font-size: 22px;
     padding-left: 30px;
-    font-family: 'Montserrat' !important;
+    font-family: 'Lato' !important;
     font-weight: 400;
     padding-top: 26px;
     border: 1px solid  var(--grey);
