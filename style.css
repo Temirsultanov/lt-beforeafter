@@ -160,7 +160,7 @@ a:hover{
     color: var(--blue);
     font-size: 22px;
     padding-left: 30px;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' !important;
     font-weight: 400;
     padding-top: 26px;
     border: 1px solid  var(--grey);
